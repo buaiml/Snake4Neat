@@ -37,6 +37,7 @@ public class Snake implements Iterable<Vector2i> {
     private Direction currentDirection;
     private Behavior behavior;
     private Color color;
+    private boolean isDead;
 
     /**
      * Creates a new snake with the given maximum length.
@@ -139,6 +140,15 @@ public class Snake implements Iterable<Vector2i> {
     }
 
     /**
+     * Returns whether the snake is dead.
+     *
+     * @return whether the snake is dead.
+     */
+    public boolean isDead() {
+        return isDead;
+    }
+
+    /**
      * Returns the current position of the head of the snake.
      *
      * @return the current position of the head of the snake.
@@ -198,6 +208,11 @@ public class Snake implements Iterable<Vector2i> {
             newHead.y = board.getHeight() - 1;
         } else if (newHead.y() >= board.getHeight()) {
             newHead.y = 0;
+        }
+
+        if (contains(newHead)) {
+            isDead = true;
+            return;
         }
 
         add(newHead);
