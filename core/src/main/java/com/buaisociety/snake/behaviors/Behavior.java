@@ -1,4 +1,7 @@
-package com.buaisociety.snake;
+package com.buaisociety.snake.behaviors;
+
+import com.buaisociety.snake.Direction;
+import com.buaisociety.snake.Snake;
 
 /**
  * Determines the behavior of the snake (how it should move/change directions).

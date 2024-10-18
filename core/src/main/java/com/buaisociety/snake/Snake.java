@@ -2,6 +2,7 @@ package com.buaisociety.snake;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.buaisociety.snake.behaviors.Behavior;
 import org.joml.Vector2i;
 import org.joml.Vector2ic;
 

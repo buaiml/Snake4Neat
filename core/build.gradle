@@ -4,6 +4,7 @@ eclipse.project.name = appName + '-core'
 dependencies {
   api "com.badlogicgames.gdx:gdx:$gdxVersion"
   implementation 'org.joml:joml:1.10.8'
+  implementation 'com.cjcrafter:neat4j:0.2.0-SNAPSHOT'
 
   if(enableGraalNative == 'true') {
     implementation "io.github.berstanio:gdx-svmhelper-annotations:$graalHelperVersion"

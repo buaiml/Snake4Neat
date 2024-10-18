@@ -1,4 +1,7 @@
-package com.buaisociety.snake;
+package com.buaisociety.snake.behaviors;
+
+import com.buaisociety.snake.Direction;
+import com.buaisociety.snake.Joystick;
 
 /**
  * A snake behavior that works off of keyboard input.
