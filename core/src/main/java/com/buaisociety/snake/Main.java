@@ -2,6 +2,7 @@ package com.buaisociety.snake;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
@@ -70,6 +71,12 @@ public class Main extends ApplicationAdapter {
             renderCount++;
 
             batch.setProjectionMatrix(camera.combined.cpy().translate(x * 24, y * 24, 0));
+
+            // Checkerboard pattern
+            if ((x + y) % 2 == 0) {
+                RenderUtil.drawRect(batch, 0, 0, 24, 24, Color.DARK_GRAY);
+            }
+
             board.render(batch);
         }
 

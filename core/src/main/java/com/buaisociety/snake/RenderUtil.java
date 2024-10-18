@@ -36,4 +36,11 @@ public final class RenderUtil {
         // Reset tint color
         batch.setColor(Color.WHITE);
     }
+
+    public static void drawRect(SpriteBatch batch, int x, int y, int width, int height, Color color) {
+        batch.setColor(color);
+        batch.draw(PIXEL, x, y, width, height);
+        // Reset tint color
+        batch.setColor(Color.WHITE);
+    }
 }
