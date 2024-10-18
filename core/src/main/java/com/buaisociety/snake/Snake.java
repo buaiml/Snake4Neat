@@ -195,7 +195,10 @@ public class Snake implements Iterable<Vector2i> {
      * Moves the snake in the current direction.
      */
     public void update() {
-        currentDirection = behavior.getDirection();
+        Direction newDirection = behavior.getDirection();
+        if (newDirection != currentDirection.opposite()) {
+            currentDirection = newDirection;
+        }
         Vector2i newHead = currentDirection.getVector().add(getHead());
 
         // Wrap new locations around the board
